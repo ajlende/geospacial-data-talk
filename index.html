@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Geospacial Data Visualizations</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+  <!-- CSS Base -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+
+  <!-- CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type="text/css" media="all" href="../static/css/svg-icons.css">
+
+  <style>
+  ul.simple-list {
+    list-style: none;
+  }
+  ul.simple-list li {
+    margin-left: 0;
+  }
+  section h2.title {
+    font-weight: 800;
+    font-size: 10rem;
+    line-height: 10rem;
+    margin-bottom: 5rem;
+  }
+  section p.subtitle {
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  section p {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  section.red {
+    background-color: #ff5c5c;
+    color: #FFF;
+  }
+  section.blue {
+    background-color: #2eb2ff;
+    color: #FFF;
+  }
+  figure img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+  }
+  figure img:hover {
+    opacity: 1;
+  }
+  .fullscreen [class*='card-'] figure video {
+    height: 100%;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  [class*='card-'] figure video {
+    display: block;
+    margin: 0 auto;
+  }
+  video {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+  }
+  figure {
+    overflow: hidden;
+  }
+  div.title-slide h2.title {
+    font-size: 16rem;
+    line-height: 16rem;
+  }
+  div.title-slide p.subtitle {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  div.title-slide {
+    position: absolute;
+    bottom: 55%;
+  }
+  div.title-video {
+    overflow: hidden;
+    top: 50%;
+    height: 50%;
+  }
+  div.title-video video.background-video {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: bottom;
+    object-position: bottom;
+  }
+  </style>
+</head>
+<body>
+  <main role="main">
+    <article id="webslides">
+      <section class="fullscreen blue">
+        <div class="title-slide">
+          <div class="wrap">
+            <h2 class="title">Geospacial Data Visualizations</h2>
+            <p class="subtitle">Alex Lende</p>
+          </div>
+        </div>
+        <div class="title-video background-video">
+          <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+            <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="card-40">
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <div class="flex-content" style="z-index: 3; justify-content: space-around; text-align: center;">
+            <h2 class="title">Maps</h2>
+            <h2 class="title">Cesium.js</h2>
+          </div>
+          <div style="position: absolute; width: 60%; height: 50%; bottom: 0; right: 0; background-color: #2eb2ff"></div>
+        </div>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="card-40">
+          <div class="flex-content">
+            <h2 class="title">Geographic Information Systems</h2>
+            <p class="subtitle">Plotting Data on a Globe</p>
+            <p>Imagery Layers</p>
+            <p>ArcGIS</p>
+            <p>Cesium</p>
+          </div>
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="card-40">
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <div class="flex-content">
+            <h2 class="title">Path</h2>
+            <p class="subtitle">Connecting Two Points</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Eclipse</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">HOWL</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Elevation</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Cerner's<br>Network Ticker</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="card-40">
+          <div class="flex-content">
+            <h2 class="title">Point</h2>
+            <p class="subtitle">Labeling Locations</p>
+          </div>
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Landmarks</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Clusters</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">First Hand</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Client Collaborations</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">PubMed</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="card-40">
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <div class="flex-content">
+            <h2 class="title">Heatmap</h2>
+            <p class="subtitle">Continuous Data</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Weather Radar</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Weather Radar</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Strava</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="red">
+        <div class="content-center">
+          <img src="https://imgs.xkcd.com/comics/heatmap.png" style="height: 75vh"/>
+        </div>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="card-40">
+          <div class="flex-content">
+            <h2 class="title">Choreopleth</h2>
+            <p class="subtitle">Regional Averages</p>
+          </div>
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Elections</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Autumn Foliage</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Football Fans</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="card-40">
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <div class="flex-content">
+            <h2 class="title">Bubble</h2>
+            <p class="subtitle">Shapes Instead of Color</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Hans Rosling</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">Cerner.com<br>Sessions</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="wrap"><h2 class="title">LightsOn</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="card-40">
+          <div class="flex-content">
+            <h2 class="title">Cesium.js Sandcastle</h2>
+            <p class="subtitle">Easiest Way to Get Started</p>
+          </div>
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">Sandcastle</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="card-40">
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <div class="flex-content">
+            <h2 class="title">Imagery Layers</h2>
+            <p class="subtitle">Integrate other GIS</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">Importing a Tile Set</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="card-40">
+          <div class="flex-content">
+            <h2 class="title">Data Sources</h2>
+            <p class="subtitle">Get the Data on the Globe</p>
+          </div>
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">GeoJson &amp;<br>TopoJson</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">KML</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">CZML</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="card-40">
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <div class="flex-content">
+            <h2 class="title">Clock &amp; Camera</h2>
+            <p class="subtitle">A Different Perspective</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">Clock</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">Camera</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="card-40">
+          <div class="flex-content">
+            <h2 class="title">Extras</h2>
+            <p class="subtitle">Visual Polish</p>
+          </div>
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">Custom Data Sources</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">3D Models</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">3D Tiles</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">Info Panel</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="wrap"><h2 class="title">Terrain</h2></div>
+        <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+          <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="card-40">
+          <div class="flex-content">
+            <h2 class="title">Even More Extras</h2>
+            <p class="subtitle">Leap Seconds</p>
+            <p class="subtitle">Textures</p>
+            <p class="subtitle">Celestial Bodies</p>
+            <p class="subtitle">Shadows</p>
+            <p class="subtitle">Virtual Reality</p>
+            <p class="subtitle">Particel Systems</p>
+          </div>
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+      </section>
+
+      <section class="fullscreen red">
+        <div class="card-40">
+          <figure>
+            <video loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+              <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <div class="flex-content" style="z-index: 3; justify-content: space-around; text-align: center;">
+            <h2 class="title">Maps Help</h2>
+            <h2 class="title">Cesium.js is Easy</h2>
+          </div>
+          <div style="position: absolute; width: 60%; height: 50%; bottom: 0; right: 0; background-color: #2eb2ff"></div>
+        </div>
+      </section>
+
+      <section class="fullscreen blue">
+        <div class="closer-video background-video">
+          <video class="background-video" loop muted autoplay poster="https://webslides.tv/static/images/peggy.jpg">
+            <source src="https://webslides.tv/static/videos/peggy.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="closer-slide">
+          <div class="wrap">
+            <p class="subtitle">Give Feedback!</p>
+            <h2 class="title">Join me for Systems of Life!</h2>
+            <p class="subtitle">Thank You!</p>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <script src="../static/js/webslides.js"></script>
+
+  <script>window.ws = new WebSlides({ changeOnClick: true, showIndex: false })</script>
+
+  <!-- svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="../static/js/svg-icons.js"></script>
+
+</body>
+</html>
