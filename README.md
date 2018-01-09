@@ -3,85 +3,112 @@
 Alex Lende (@ajlende)
 
 
-## Intro (1 min)
-
+## Intro
 - Alex Lende, SE on UX, Labs
 - We tell stories with data: Cerner, Client, Healthcare
-- Many stories featured on Systems of Life Media Wall
-- Challenge to create rich, meaningful, polished, data visualization for global data on a budget before the building opens in 3 months
-- That was last last November—now I've come to understand data visualizations pretty well
-- Part of work has been with global visualizations part has been with other 3d visualizations
+- Then share them on Systems of Life Media Wall
+- When I joined we had the challenge to create rich, meaningful, polished, data visualization for global data on a budget before the building opens in 3 months
+- Most of my work is done in 3D (with libraries like Three.js and Cesium.js)
+- That was a year and a half ago—now I've come to understand data visualizations pretty well
 
 
-## Definitions (1 min)
+## Overview
 
-### GIS: Geographical Information Systems
-- Formally: Database for image layers containing spacial data maps
-- Extended: Any system for showing data on a map
+### Map Types
+- All can be created with Cesium.js
+- Benefits/When to use
+- Pitfalls/When not to use
+- Examples
+  - in the world
+  - in Systems of Life
 
-### Cesium
-- Cesium is a Javascript library for drawing 3D globes and data
-- Cesium isn't, by the strictest definition, a GIS, but it does data presentation
-- Cesium can interface with other, more traditional, GISs (more later)
+### Making Maps
+- How to get started with Cesium.js
+- Code examples
+- Other tools
 
 
-## Types of Map Visualizations (15 min total)
+## Types of Map Visualizations
 
-### Paths (2 min)
-- Examples: Google Maps, Eclipse, Oregon Gray Wolf, 3D Hang Glider
-- Story: Interoperability Ticker
+### Paths
 - Use: for showing routes and directions
+- Examples:
+  - Google Maps Directions
+  - Eclipse
+  - Oregon Gray Wolf (Highlighting Oregon's WildLands 2012)
+  - 3D Hang Glider
+- Systems of Life:
+ - Interoperability Ticker
+ - Abstract path over time
+- Aside: Time in visualizations
+  - Slider along the bottom to show position at a given time
+  - Extra dimension to data
 
-### Aside: Time in visualizations (1 min)
-- Slider along the bottom to show position at a given time
-- Extra dimension to data
+### Points
+- Use: for labeling things or marking locations
+- Examples:
+  - Google Maps Explore
+  - Foursquare
+  - Global Science Facilities
+- Systems of Life:
+  - Client Collaborations
+  - FirstHand
+- Extra:
+  - Dense Points
+  - PubMed is dense points to make more of a heat map
 
-### Points (2 min)
-- Examples: Landmarks, Foursquare
-- Story: Client Collaborations, FirstHand
-- Use: for labelling things or marking locations
-
-### Aside: Dense Points (1 min)
-- PubMed is dense points to make more of a heat map
-
-### Heatmap (2 min)
-- Examples: Weather radar
-- Story: Biking, Strava
+### Heatmap
 - Use: for showing concentrations, continuous data
+- Examples:
+  - Weather radar
+  - Strava
+- Extra:
+  - Be careful
+  - (xkcd) of heat maps turning into population maps
 
-### Aside: Be careful (1 min)
-- (xkcd) of heat maps turning into population maps
-
-### Choropleth (2 min)
-- Examples: Election, Foliage, NCAA College Football
+### Choropleth
 - Use: for showing collective majorities or minorities in an area
-- Re-iterate be careful by using percentages and points per capita
-- Notice we don't have a SoL visualization of this. I see this one misrepresent data most.
+- Examples:
+  - Foliage
+  - NCAA College Football
+- Extra:
+  - Be careful
+  - Misleading when data is tied to population—really large areas (Wyoming) might have a smaller population that a much smaller area (Washington, D.C.)
+  - (xkcd) Election map example
 
-### Bubble (2 min)
-- Example: Hans Rosling (Health and Wealth of Nations)
-- Story: LightsOn Transactions, CernerDotCom Sessions
-- Use: for similar things to choropleth maps
+### Bubble
+- Use: for similar things to choropleth maps without the area part
+- Examples:
+  - Hans Rosling - Health and Wealth of Nations (width = population, height = health|wealth)
+  - He was comparing health to wealth, but if you wanted to focus more on the geography, maps are better
+- Systems of Life:
+  - Cerner.com Sessions
+  - LightsOn Transactions
+- Extra:
+  - Sometimes, like in Hans Rosling's case colors and other types of charts can be sufficient to convey the data in a meaningful way
+  - With Longitude and Latitude data, almost always makes sense to plot it
+  - ZIP code, County, State groups sometimes work
+  - Country groups less so
 
-### Aside: Not all data goes on a map choropleth maps, but uses size rather than color (2 min)
-- Sometimes, like in Hans Rosling's case colors and other types of charts can be sufficient to convey the data in a meaningful way
-- With Longitude and Latitude data, almost always makes sense to plot it
-- ZIP code, County, State groups sometimes work
-- Country groups less so
+--------------------------------------------------------------------------------
 
+**Break for questions**
+
+--------------------------------------------------------------------------------
 
 ## Getting Started with Cesium (12 min)
 
-### Intro (1 min)
-- Now you know the types of plots how to actually make the thing
-- Cesium is a Javascript library for drawing 3D globes
+### Getting Started
+- Cesium is a Javascript library for drawing 3D globes and data
 - Cesium Sandcastle
 
-### Imagery Layers (2 min)
-- Interface to traditional GIS: ArcGIS, OpenMaps, GEE
-- Football Example
+### Imagery Layers
+- Interface to traditional Geographical Information System
+  - Database for image layers containing spacial data maps
+  - Popular GISs: ArcGIS, OpenMap, GEE
+- Example NCAA College Football
 
-### Data Sources (4 min)
+### Data Sources
 - GeoJSON/TopoJSON
   - JSON based
   - Most popular
@@ -93,22 +120,22 @@ Alex Lende (@ajlende)
   - Google Maps
 - CZML
   - Custom Cesium Markup Language
-  - JSON Based
   - Most powerful in Cesium
+  - JSON Based
   - Time dynamic
-  - Python and Java tool to build it
+  - .NET, Java, Python, JavaScript libraries for editing it
 - Imagery Layers
   - mapbox/tippecanoe for converting larger sets into tiles
   - Python based tools
 
-### Clock & Camera (2 min)
+### Clock & Camera
 - Fine-tuned representation of data
 - Speed
 - Look Direction
-- Position via Cartesian (x,y,z) or Cartographic (lon,lat)
+- Position via Cartesian (x,y,z) or Cartographic (lon,lat,alt)
 
-### Extras (3 min)
-- Deals with leap seconds
+### Extras
+- Leap Seconds
 - Info Panel
 - 3D Tiles
 - Entities/3D Models
@@ -116,25 +143,63 @@ Alex Lende (@ajlende)
 - Atmosphere
 - Celestial bodies
 - Terrain
+- Other planets (not using the WSG84 ellipsoid)
 - Shadows
 - WebVR
 - Desktop apps with Electron
 - Mobile apps with Cordova
-- I'm working on a React Cesium Library
 
+### React Cesium
+- We didn't end up using many of the built-in data types
+- We started using React
+- In combination with react-router we can change data on the globe via a route
+- Will increase performance when switching between globes when we release an interactive website
+- Simple example
 
-## Conclusion (1 min)
+## Conclusion
+- Maps are a powerful tool for representing data
+- [Cesium.js] and react-cesium make it easy to build interactive maps
+- Contribute stories to [Systems of Life](https://github.cerner.com/ux/systems-of-life)
+- Contribute to [React Cesium](https://github.cerner.com/al048401/react-cesium)
 
-- Maps help better represent data
-- Creating them is easy
+--------------------------------------------------------------------------------
 
-- @ajlende
-- alex.lende@cerner.com
-- Feedback is appreciated
-- Follow me to the next exciting talk about Systems of Life
-- Thank you
+**More time for questions**
+
+--------------------------------------------------------------------------------
+
+- Contribute stories to [Systems of Life](https://github.cerner.com/ux/systems-of-life)
+- Contribute to [React Cesium](https://github.cerner.com/al048401/react-cesium)
+- All links are found in my GitHub repo [al048401/geospacial-slides](https://github.cerner.com/al048401/geospacial-slides)
+- Talk to me: Alex Lende <alex.lende@cerner.com> ([@ajlende](https://ajlende.com))
+- Thank you!
 
 
 ## Credits
-
 - Created with [WebSlides](webslides.tv) by [@jlantunez](https://twitter.com/jlantunez).
+- [Cesium.js Demos](https://cesiumjs.org/demos/)
+  - [Cesium Sandcastle](https://cesiumjs.org/Cesium/Build/Apps/Sandcastle/index.html?src=Hello%20World.html&label=Showcases)
+  - [EclipseTracks.org](https://cesium.com/blog/2015/03/19/eclipsetracks-interactive-solar-eclipses-with-cesium/)
+  - [HOWL](https://cesiumjs.org/demos/HOWL/)
+  - [Global Precipitation](https://pps.gsfc.nasa.gov/THORonline/cesium/index.html)
+  - [Choreopleth](https://cesiumjs.org/demos/4DChoroplethMap/)
+  - [Health and Wealth of Nations](https://cesiumjs.org/demos/d3/)
+  - [Global Science Facilities](https://cesiumjs.org/Cesium/Build/Apps/Sandcastle/?src=KML.html)
+- Other Examples
+  - [Strava Heatmap](https://labs.strava.com/heatmap/)
+  - [NCAA Football Map](https://www.nytimes.com/interactive/2014/10/03/upshot/ncaa-football-map.html)
+  - [Hans Rosling](https://www.ted.com/speakers/hans_rosling)
+  - [Fall Foliage Map](https://smokymountains.com/fall-foliage-map/)
+- Tileset tools/GIS
+  - [mapbox/tippecanoe](https://github.com/mapbox/tippecanoe)
+  - [google/earthenterprise](https://github.com/google/earthenterprise)
+  - [ArcGIS](https://www.arcgis.com)
+  - [OpenMap](http://openmap-java.org/)
+- GeoJSON/TopoJSON Tools
+  - [geojson.io](http://geojson.io/)
+  - [Awesome GeoJSON](https://github.com/tmcw/awesome-geojson)
+- CZML Tools
+  - [AnalyticalGraphicsInc/czml-writer](https://github.com/AnalyticalGraphicsInc/czml-writer)
+  - [cleder/czml](https://github.com/cleder/czml)
+- [Systems of Life](https://github.cerner.com/ux/systems-of-life)
+- [React Cesium](https://github.cerner.com/al048401/react-cesium)
