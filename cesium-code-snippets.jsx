@@ -1,4 +1,4 @@
-/* global Cesium, viewer */
+/* global Cesium, viewer, ReactCesium, React, ReactDOM */
 /* eslint-env browser */
 /* eslint-disable no-unused-vars, no-plusplus, no-alert */
 
@@ -78,3 +78,50 @@ promise.then((dataSource) => {
   // Display any errrors encountered while loading.
   window.alert(error);
 });
+
+/*
+ * react-cesium
+ */
+
+const {
+  Cesium: CesiumViewer,
+  Scene,
+  Camera,
+  Globe,
+  DataSourceCollection,
+  CustomDataSource,
+  Entity,
+} = ReactCesium;
+
+const { Cartesian3 } = Cesium;
+
+const entityProps = [
+  { point: { pixelSize: 10 }, position: Cartesian3.fromDegrees(0, 0, 0) },
+  { point: { pixelSize: 10 }, position: Cartesian3.fromDegrees(0, 10, 0) },
+  { point: { pixelSize: 10 }, position: Cartesian3.fromDegrees(10, 0, 0) },
+  { point: { pixelSize: 10 }, position: Cartesian3.fromDegrees(10, 10, 0) },
+];
+
+const destination = Cartesian3.fromDegrees(5, 5, 10000000);
+
+class MyCesiumViz extends React.Component {
+  componentDidMount() {
+    this.camera.flyTo({ destination });
+  }
+  render() {
+    return (
+      <CesiumViewer>
+        <Scene>
+          <Camera val={camera => (this.camera = camera)} />
+        </Scene>
+        <DataSourceCollection>
+          <CustomDataSource name="myData">
+            {entityProps.map(props => <Entity {...props} />)}
+          </CustomDataSource>
+        </DataSourceCollection>
+      </CesiumViewer>
+    );
+  }
+}
+
+ReactDOM.render(React.createElement(MyCesiumViz), document.getElementById('root'));
